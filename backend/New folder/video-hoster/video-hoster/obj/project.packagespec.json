@@ -1,0 +1,59 @@
+﻿{
+  "version": "1.0.0",
+  "restore": {
+    "projectUniqueName": "C:\\projects\\video-hoster\\backend\\New folder\\video-hoster\\video-hoster\\video-hoster.csproj",
+    "projectName": "video-hoster",
+    "projectPath": "C:\\projects\\video-hoster\\backend\\New folder\\video-hoster\\video-hoster\\video-hoster.csproj",
+    "outputPath": "C:\\projects\\video-hoster\\backend\\New folder\\video-hoster\\video-hoster\\obj\\",
+    "projectStyle": "PackageReference",
+    "originalTargetFrameworks": [
+      "netcoreapp3.1"
+    ],
+    "sources": {
+      "https://api.nuget.org/v3/index.json": {}
+    },
+    "frameworks": {
+      "netcoreapp3.1": {
+        "projectReferences": {
+          "C:\\projects\\video-hoster\\backend\\New folder\\VideoHoster.DAL\\VideoHoster.DAL.csproj": {
+            "projectPath": "C:\\projects\\video-hoster\\backend\\New folder\\VideoHoster.DAL\\VideoHoster.DAL.csproj"
+          }
+        }
+      }
+    },
+    "warningProperties": {
+      "warnAsError": [
+        "NU1605"
+      ]
+    }
+  },
+  "frameworks": {
+    "netcoreapp3.1": {
+      "dependencies": {
+        "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+          "target": "Package",
+          "version": "[1.10.9, )"
+        }
+      },
+      "imports": [
+        "net461",
+        "net462",
+        "net47",
+        "net471",
+        "net472",
+        "net48"
+      ],
+      "assetTargetFallback": true,
+      "warn": true,
+      "frameworkReferences": {
+        "Microsoft.AspNetCore.App": {
+          "privateAssets": "none"
+        },
+        "Microsoft.NETCore.App": {
+          "privateAssets": "all"
+        }
+      },
+      "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+.container {
+  display: block;
+  margin-right: 10%;
+}
+.info {
+  display: block;
+  margin-left: 2%;
+}
+.infoFlex {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+.text {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 80%;
+  font-weight: 400;
+  margin-bottom: 0.25rem;
+  white-space: nowrap;
+}
+.media {
+  display: block;
+}
+.mediaFlex {
+  display: flex;
+  flex-direction: row;
+}
+.title {
+  color: #212529;
+  text-decoration: underline;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 3%;
+}

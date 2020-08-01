@@ -1,0 +1,75 @@
+{
+  "runtimeTarget": {
+    "name": ".NETStandard,Version=v2.0/",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETStandard,Version=v2.0": {},
+    ".NETStandard,Version=v2.0/": {
+      "VideoHoster.Domain/1.0.0": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.3",
+          "QuickGraph": "3.6.61119.7"
+        },
+        "runtime": {
+          "VideoHoster.Domain.dll": {}
+        }
+      },
+      "Microsoft.NETCore.Platforms/1.1.0": {},
+      "NETStandard.Library/2.0.3": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0"
+        }
+      },
+      "QuickGraph/3.6.61119.7": {
+        "runtime": {
+          "lib/net4/QuickGraph.Data.dll": {
+            "assemblyVersion": "3.6.61114.0",
+            "fileVersion": "3.6.61114.0"
+          },
+          "lib/net4/QuickGraph.Graphviz.dll": {
+            "assemblyVersion": "3.6.61114.0",
+            "fileVersion": "3.6.61114.0"
+          },
+          "lib/net4/QuickGraph.Serialization.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          },
+          "lib/net4/QuickGraph.dll": {
+            "assemblyVersion": "3.6.61114.0",
+            "fileVersion": "3.6.61114.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "VideoHoster.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.NETCore.Platforms/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
+      "path": "microsoft.netcore.platforms/1.1.0",
+      "hashPath": "microsoft.netcore.platforms.1.1.0.nupkg.sha512"
+    },
+    "NETStandard.Library/2.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
+      "path": "netstandard.library/2.0.3",
+      "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
+    },
+    "QuickGraph/3.6.61119.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-crtYNiFcYFtYbmbEfdYsdGw5M3923OO5ZZD25K+WeLPgTp/q4oq3U/FVrbaOK5+Jg8UJDmoZ6sqAVion4RgXCA==",
+      "path": "quickgraph/3.6.61119.7",
+      "hashPath": "quickgraph.3.6.61119.7.nupkg.sha512"
+    }
+  }
+}

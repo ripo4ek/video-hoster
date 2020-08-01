@@ -1,0 +1,60 @@
+{
+  "name": "video-hoster",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.2.5",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "@types/jest": "^24.0.0",
+    "@types/node": "^12.0.0",
+    "@types/react": "^16.9.0",
+    "@types/react-dom": "^16.9.0",
+    "@types/react-redux": "^7.1.7",
+    "@types/react-router-dom": "^5.1.5",
+    "@types/react-select": "^3.0.13",
+    "@types/react-slick": "^0.23.4",
+    "@types/react-transition-group": "^4.4.0",
+    "axios": "^0.19.2",
+    "bootstrap": "^4.5.0",
+    "csstype": "^2.6.10",
+    "moment": "^2.27.0",
+    "nouislider-react": "^3.3.8",
+    "plural-ru": "^2.0.2",
+    "react": "^16.13.1",
+    "react-bootstrap": "^1.0.1",
+    "react-dom": "^16.13.1",
+    "react-player": "^2.5.0",
+    "react-redux": "^7.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.1",
+    "react-select": "^3.1.0",
+    "react-slick": "^0.26.1",
+    "react-sticky": "^6.0.3",
+    "react-transition-group": "^4.4.1",
+    "slick-carousel": "^1.8.1",
+    "typescript": "~3.8.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

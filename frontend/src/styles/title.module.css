@@ -1,0 +1,77 @@
+.mainContainer {
+  padding: 1%;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+}
+.mediaContainder {
+  display: block;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+}
+.mediaFlexContainder {
+  display: flex;
+  flex-direction: column;
+}
+.mediaTitleName {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.2;
+  color: inherit;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.range {
+  display: flex;
+  flex-direction: row;
+}
+.rangeElement {
+  margin-right: 2%;
+}
+.raitingNumber {
+  font-size: 24px;
+  line-height: 24px;
+  color: #212529;
+  font-weight: 400;
+}
+
+.mediaRaiting {
+  display: block;
+}
+.mediaRaitingFlex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 90px;
+  justify-content: space-around;
+}
+.titleDescription {
+  margin-top: 2%;
+}
+.raitingAll {
+  bottom: -0.5em;
+}
+.connectionTitle {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.2;
+  color: inherit;
+  padding-bottom: 1%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.connectionContainer {
+  display: flex;
+}
+.connection {
+  display: flex;
+  flex-direction: column;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}

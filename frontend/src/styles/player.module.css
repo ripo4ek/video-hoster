@@ -1,0 +1,66 @@
+.playerFlexContainer {
+  display: flex;
+  flex-direction: row;
+  height: 550px;
+}
+.flexContainer {
+  display: flex;
+  flex-direction: column;
+}
+.container {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.84);
+}
+.title {
+  color: #fff;
+  font-size: 1.75rem;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-left: 1%;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+}
+.playerContainer {
+  /* margin-left: 5%; */
+}
+.selectAudio {
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #434343;
+}
+.selectContainer {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(17, 17, 17);
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.flexContainer {
+  display: flex;
+  flex-direction: row;
+}
+.flexContainer > [class*='col-'] {
+  padding-right: 0;
+  padding-left: 0;
+}
+.episodeInfo {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.episodeInfoName {
+  color: #999;
+  margin-right: 0.25rem;
+}
+.episodeInfoContainer {
+  display: flex;
+  flex-direction: row;
+  margin-top: 0.5rem;
+}
+.episodeInfoData {
+  color: white;
+}

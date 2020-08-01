@@ -1,0 +1,36 @@
+.container {
+  display: block;
+  margin-bottom: 0.5%;
+}
+.flexContainer {
+  display: flex;
+  flex-direction: row;
+}
+.elementList {
+  display: block;
+  margin-left: 25%;
+}
+.elementListFlex {
+  display: flex;
+  flex-direction: row;
+}
+.elementInfo {
+  margin-right: 0.5%;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+}
+.elementName {
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 35%;
+}
+.dataContainer {
+  display: block;
+  text-align: left;
+}

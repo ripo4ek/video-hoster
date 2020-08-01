@@ -1,0 +1,30 @@
+@import '~slick-carousel/slick/slick.css';
+@import '~slick-carousel/slick/slick-theme.css';
+@import '~nouislider/distribute/nouislider.css';
+
+.noUi-handle {
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: default;
+  -webkit-box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.04);
+  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  outline: 0;
+}
+.noUi-horizontal .noUi-handle {
+  width: 14px;
+  height: 24px;
+  right: -7px;
+  top: -10px;
+}
+.noUi-handle:before,
+.noUi-handle:after {
+  display: none;
+}
+.noUi-connect {
+  background-color: #ff5c57;
+  border-radius: 4px;
+}
+.noUi-tooltip {
+  font-size: 13px;
+}

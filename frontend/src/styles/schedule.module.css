@@ -1,0 +1,57 @@
+.container {
+  display: block;
+  background-color: #343a40;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-right: 1%;
+  padding-left: 1%;
+}
+.flexContainer {
+  display: flex;
+  align-items: center;
+}
+.episodeNumber,
+.episodeNumber,
+.episodeName,
+.episodeDate,
+.status {
+  flex-basis: 25%;
+  white-space: nowrap;
+  color: white;
+}
+.status {
+  text-align: center;
+}
+.title {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.scheduleContainer {
+  padding-top: 1rem;
+}
+.showMore {
+  padding-top: 1.5%;
+  display: flex;
+  justify-content: center;
+}
+.showMoreText {
+  cursor: pointer;
+  border-bottom: 1px dashed;
+}
+.arrowUp,
+.arrowDown {
+  width: 1.5%;
+}
+.arrowUp {
+  padding-top: 0.25%;
+}
+.arrowDown {
+  transform: rotate(180deg);
+  padding-top: -0.25%;
+}
+.longContainer {
+  height: 60vh;
+  overflow: auto;
+}

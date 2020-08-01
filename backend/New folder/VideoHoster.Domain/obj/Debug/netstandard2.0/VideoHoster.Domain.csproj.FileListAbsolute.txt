@@ -1,0 +1,27 @@
+C:\project\video-hoster\backend\VideoHoster.Domain\bin\Debug\netstandard2.0\VideoHoster.Domain.deps.json
+C:\project\video-hoster\backend\VideoHoster.Domain\bin\Debug\netstandard2.0\VideoHoster.Domain.dll
+C:\project\video-hoster\backend\VideoHoster.Domain\obj\Debug\netstandard2.0\VideoHoster.Domain.csproj.CoreCompileInputs.cache
+C:\project\video-hoster\backend\VideoHoster.Domain\obj\Debug\netstandard2.0\VideoHoster.Domain.AssemblyInfoInputs.cache
+C:\project\video-hoster\backend\VideoHoster.Domain\obj\Debug\netstandard2.0\VideoHoster.Domain.AssemblyInfo.cs
+C:\project\video-hoster\backend\VideoHoster.Domain\bin\Debug\netstandard2.0\VideoHoster.Domain.pdb
+C:\project\video-hoster\backend\VideoHoster.Domain\obj\Debug\netstandard2.0\VideoHoster.Domain.dll
+C:\project\video-hoster\backend\VideoHoster.Domain\obj\Debug\netstandard2.0\VideoHoster.Domain.pdb
+C:\project\video-hoster\backend\VideoHoster.Domain\obj\Debug\netstandard2.0\VideoHoster.Domain.csprojAssemblyReference.cache
+C:\project\video-hoster\backend\New folder\VideoHoster.Domain\bin\Debug\netstandard2.0\VideoHoster.Domain.deps.json
+C:\project\video-hoster\backend\New folder\VideoHoster.Domain\bin\Debug\netstandard2.0\VideoHoster.Domain.dll
+C:\project\video-hoster\backend\New folder\VideoHoster.Domain\bin\Debug\netstandard2.0\VideoHoster.Domain.pdb
+C:\project\video-hoster\backend\New folder\VideoHoster.Domain\obj\Debug\netstandard2.0\VideoHoster.Domain.csprojAssemblyReference.cache
+C:\project\video-hoster\backend\New folder\VideoHoster.Domain\obj\Debug\netstandard2.0\VideoHoster.Domain.AssemblyInfoInputs.cache
+C:\project\video-hoster\backend\New folder\VideoHoster.Domain\obj\Debug\netstandard2.0\VideoHoster.Domain.AssemblyInfo.cs
+C:\project\video-hoster\backend\New folder\VideoHoster.Domain\obj\Debug\netstandard2.0\VideoHoster.Domain.csproj.CoreCompileInputs.cache
+C:\project\video-hoster\backend\New folder\VideoHoster.Domain\obj\Debug\netstandard2.0\VideoHoster.Domain.dll
+C:\project\video-hoster\backend\New folder\VideoHoster.Domain\obj\Debug\netstandard2.0\VideoHoster.Domain.pdb
+C:\projects\video-hoster\backend\New folder\VideoHoster.Domain\bin\Debug\netstandard2.0\VideoHoster.Domain.deps.json
+C:\projects\video-hoster\backend\New folder\VideoHoster.Domain\bin\Debug\netstandard2.0\VideoHoster.Domain.dll
+C:\projects\video-hoster\backend\New folder\VideoHoster.Domain\bin\Debug\netstandard2.0\VideoHoster.Domain.pdb
+C:\projects\video-hoster\backend\New folder\VideoHoster.Domain\obj\Debug\netstandard2.0\VideoHoster.Domain.csprojAssemblyReference.cache
+C:\projects\video-hoster\backend\New folder\VideoHoster.Domain\obj\Debug\netstandard2.0\VideoHoster.Domain.AssemblyInfoInputs.cache
+C:\projects\video-hoster\backend\New folder\VideoHoster.Domain\obj\Debug\netstandard2.0\VideoHoster.Domain.AssemblyInfo.cs
+C:\projects\video-hoster\backend\New folder\VideoHoster.Domain\obj\Debug\netstandard2.0\VideoHoster.Domain.csproj.CoreCompileInputs.cache
+C:\projects\video-hoster\backend\New folder\VideoHoster.Domain\obj\Debug\netstandard2.0\VideoHoster.Domain.dll
+C:\projects\video-hoster\backend\New folder\VideoHoster.Domain\obj\Debug\netstandard2.0\VideoHoster.Domain.pdb

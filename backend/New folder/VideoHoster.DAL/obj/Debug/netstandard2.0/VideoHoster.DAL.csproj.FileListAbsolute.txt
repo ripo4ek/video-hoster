@@ -1,0 +1,36 @@
+C:\project\video-hoster\backend\VideoHoster.DAL\bin\Debug\netstandard2.0\VideoHoster.DAL.deps.json
+C:\project\video-hoster\backend\VideoHoster.DAL\bin\Debug\netstandard2.0\VideoHoster.DAL.dll
+C:\project\video-hoster\backend\VideoHoster.DAL\obj\Debug\netstandard2.0\VideoHoster.DAL.csprojAssemblyReference.cache
+C:\project\video-hoster\backend\VideoHoster.DAL\obj\Debug\netstandard2.0\VideoHoster.DAL.csproj.CoreCompileInputs.cache
+C:\project\video-hoster\backend\VideoHoster.DAL\obj\Debug\netstandard2.0\VideoHoster.DAL.AssemblyInfoInputs.cache
+C:\project\video-hoster\backend\VideoHoster.DAL\obj\Debug\netstandard2.0\VideoHoster.DAL.AssemblyInfo.cs
+C:\project\video-hoster\backend\VideoHoster.DAL\bin\Debug\netstandard2.0\VideoHoster.DAL.pdb
+C:\project\video-hoster\backend\VideoHoster.DAL\bin\Debug\netstandard2.0\VideoHoster.Domain.dll
+C:\project\video-hoster\backend\VideoHoster.DAL\bin\Debug\netstandard2.0\VideoHoster.Domain.pdb
+C:\project\video-hoster\backend\VideoHoster.DAL\obj\Debug\netstandard2.0\VideoHoster.DAL.csproj.CopyComplete
+C:\project\video-hoster\backend\VideoHoster.DAL\obj\Debug\netstandard2.0\VideoHoster.DAL.dll
+C:\project\video-hoster\backend\VideoHoster.DAL\obj\Debug\netstandard2.0\VideoHoster.DAL.pdb
+C:\project\video-hoster\backend\New folder\VideoHoster.DAL\bin\Debug\netstandard2.0\VideoHoster.DAL.deps.json
+C:\project\video-hoster\backend\New folder\VideoHoster.DAL\bin\Debug\netstandard2.0\VideoHoster.DAL.dll
+C:\project\video-hoster\backend\New folder\VideoHoster.DAL\bin\Debug\netstandard2.0\VideoHoster.DAL.pdb
+C:\project\video-hoster\backend\New folder\VideoHoster.DAL\bin\Debug\netstandard2.0\VideoHoster.Domain.dll
+C:\project\video-hoster\backend\New folder\VideoHoster.DAL\bin\Debug\netstandard2.0\VideoHoster.Domain.pdb
+C:\project\video-hoster\backend\New folder\VideoHoster.DAL\obj\Debug\netstandard2.0\VideoHoster.DAL.csprojAssemblyReference.cache
+C:\project\video-hoster\backend\New folder\VideoHoster.DAL\obj\Debug\netstandard2.0\VideoHoster.DAL.AssemblyInfoInputs.cache
+C:\project\video-hoster\backend\New folder\VideoHoster.DAL\obj\Debug\netstandard2.0\VideoHoster.DAL.AssemblyInfo.cs
+C:\project\video-hoster\backend\New folder\VideoHoster.DAL\obj\Debug\netstandard2.0\VideoHoster.DAL.csproj.CoreCompileInputs.cache
+C:\project\video-hoster\backend\New folder\VideoHoster.DAL\obj\Debug\netstandard2.0\VideoHoster.DAL.csproj.CopyComplete
+C:\project\video-hoster\backend\New folder\VideoHoster.DAL\obj\Debug\netstandard2.0\VideoHoster.DAL.dll
+C:\project\video-hoster\backend\New folder\VideoHoster.DAL\obj\Debug\netstandard2.0\VideoHoster.DAL.pdb
+C:\projects\video-hoster\backend\New folder\VideoHoster.DAL\bin\Debug\netstandard2.0\VideoHoster.DAL.deps.json
+C:\projects\video-hoster\backend\New folder\VideoHoster.DAL\bin\Debug\netstandard2.0\VideoHoster.DAL.dll
+C:\projects\video-hoster\backend\New folder\VideoHoster.DAL\bin\Debug\netstandard2.0\VideoHoster.DAL.pdb
+C:\projects\video-hoster\backend\New folder\VideoHoster.DAL\bin\Debug\netstandard2.0\VideoHoster.Domain.dll
+C:\projects\video-hoster\backend\New folder\VideoHoster.DAL\bin\Debug\netstandard2.0\VideoHoster.Domain.pdb
+C:\projects\video-hoster\backend\New folder\VideoHoster.DAL\obj\Debug\netstandard2.0\VideoHoster.DAL.csprojAssemblyReference.cache
+C:\projects\video-hoster\backend\New folder\VideoHoster.DAL\obj\Debug\netstandard2.0\VideoHoster.DAL.AssemblyInfoInputs.cache
+C:\projects\video-hoster\backend\New folder\VideoHoster.DAL\obj\Debug\netstandard2.0\VideoHoster.DAL.AssemblyInfo.cs
+C:\projects\video-hoster\backend\New folder\VideoHoster.DAL\obj\Debug\netstandard2.0\VideoHoster.DAL.csproj.CoreCompileInputs.cache
+C:\projects\video-hoster\backend\New folder\VideoHoster.DAL\obj\Debug\netstandard2.0\VideoHoster.DAL.csproj.CopyComplete
+C:\projects\video-hoster\backend\New folder\VideoHoster.DAL\obj\Debug\netstandard2.0\VideoHoster.DAL.dll
+C:\projects\video-hoster\backend\New folder\VideoHoster.DAL\obj\Debug\netstandard2.0\VideoHoster.DAL.pdb

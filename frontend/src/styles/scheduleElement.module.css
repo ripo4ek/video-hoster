@@ -1,0 +1,36 @@
+.container {
+  display: block;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding-right: 1%;
+  padding-left: 1%;
+}
+.flexContainer {
+  display: flex;
+  align-items: center;
+}
+.episodeNumber,
+.episodeNumber,
+.episodeName,
+.episodeDate {
+  flex-basis: 25%;
+  white-space: nowrap;
+}
+.episodeNumber {
+}
+.episodeName {
+  font-weight: 700;
+}
+.episodeDate {
+}
+.tickContainer {
+  display: flex;
+  justify-content: center;
+  max-height: 5vh;
+  flex-basis: 25%;
+}
+.releaseTick {
+  width: 10%;
+  fill: #28a745;
+}

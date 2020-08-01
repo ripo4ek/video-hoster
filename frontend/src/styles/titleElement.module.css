@@ -1,0 +1,33 @@
+.container {
+  display: block;
+}
+.title {
+  color: #ff5c57 !important;
+  text-decoration: none;
+  background-color: transparent;
+  font-size: 21px;
+  font-weight: 490;
+}
+.mainFlexContainer {
+  display: flex;
+  padding: 2%;
+}
+.genereList {
+  display: flex;
+}
+.separator {
+  color: rgba(0, 0, 0, 0.6);
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+.genereName {
+  text-decoration: underline;
+  color: #212529;
+  touch-action: manipulation;
+}
+.genereName:hover {
+  color: #ff5c57;
+}
+.titleInfo {
+  margin-left: 2rem;
+}

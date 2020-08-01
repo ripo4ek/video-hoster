@@ -1,0 +1,21 @@
+.main {
+  background-color: #212529;
+  color: white;
+  border-bottom: 5px solid red;
+}
+
+.sliderElementContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sliderElementText {
+  color: #ff5c57 !important;
+  text-decoration: none;
+  background-color: transparent;
+  font-size: 21px;
+  font-weight: 490;
+}
+.sliderElement {
+  display: inline-block;
+}
