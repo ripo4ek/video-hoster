@@ -49,7 +49,7 @@ namespace video_hoster
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=TitleBase}/{action=Get}");
+                    pattern: "{controller=TitleBases}/{action=Get}");
                 endpoints.MapControllers();
             });
         }

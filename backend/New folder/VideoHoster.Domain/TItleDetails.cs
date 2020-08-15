@@ -4,11 +4,13 @@ namespace VideoHoster.Domain
 {
     public class TItleDetails
     {
-        public TitleType TitleType { get; set; }
-        public TitleStatus TitleStatus { get; set; }
-        public DateRange ReleaseDateRange { get; set; }
-        public string Description { get; set; }
+       
+        public int EpisodeDurationInMin { get; set; }
+        public int EposodesCount { get; set; }
         public IEnumerable<string> Screenshots { get; set; }
+        
+        public string TrailerUrl { get; set; }
+        
         public IEnumerable<Episode> Episodes { get; set; }
     }
 }

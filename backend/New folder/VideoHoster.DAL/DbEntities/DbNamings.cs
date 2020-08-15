@@ -2,9 +2,13 @@
 {
     public class DbNamings
     {
-        public static string TitleBase { get; } = "TitleBase";
+        public static string TitleBases { get; } = "TitleBases";
+        public static string Statuses { get; } = "Statuses";
+        
+        public static string Types { get; } = "Types";
+        
         public static string Episodes { get; } = "Episodes";
-        public static string TitleTrees { get; } = "TitleTrees";
+
         public static string Genres { get; } = "Genres";
     }
 }

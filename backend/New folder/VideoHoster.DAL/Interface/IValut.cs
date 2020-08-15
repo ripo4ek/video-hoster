@@ -18,9 +18,13 @@ namespace VideoHoster.DAL.Interface
         void UpdateTitleTree(TitleTree title);
         void DeleteTitleTree(string id);
         void AddTitleTree(TitleTree titleTree);
-
+        void PushForTest();
         TItleDetails GetTitleDetails(string id);
         Genere GetGenere(string id);
+        Status GetTitleStatus(string id);
+        TitleType GetTitleType(string id);
+        
+        
         IEnumerable<TItleDetails> GetTitleDetails();
         
         void DeleteTitleDetails(string id);
