@@ -1,4 +1,4 @@
 export interface ITitleStatus {
-  id: number
-  name: string
+  id: string;
+  name: string;
 }

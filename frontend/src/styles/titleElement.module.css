@@ -31,3 +31,7 @@
 .titleInfo {
   margin-left: 2rem;
 }
+.description {
+  word-break: break-all;
+  text-overflow: ellipsis;
+}

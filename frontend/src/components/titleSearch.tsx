@@ -15,9 +15,9 @@ export interface TitleSearchState {}
 class TitleSearch extends React.Component<TitleSearchProps, TitleSearchState> {
   render() {
     const generes: Array<IGenere> = [
-      { id: 12, name: 'test' },
-      { id: 13, name: 'Gavno' },
-      { id: 14, name: 'testGavno' },
+      { id: '12', name: 'test' },
+      { id: '13', name: 'Gavno' },
+      { id: '14', name: 'testGavno' },
     ]
     const test22: ITitleElement = {
       id: 12,
@@ -37,9 +37,9 @@ class TitleSearch extends React.Component<TitleSearchProps, TitleSearchState> {
       name: 'TestName',
       titles: [test22, test23],
     }
-    const status: ITitleStatus = { id: 12, name: 'OVA' }
-    const status2: ITitleStatus = { id: 33, name: 'anime' }
-    const status23: ITitleStatus = { id: 223, name: 'complete' }
+    const status: ITitleStatus = { id: '12', name: 'OVA' }
+    const status2: ITitleStatus = { id: '33', name: 'anime' }
+    const status23: ITitleStatus = { id: '223', name: 'complete' }
     const statuses: Array<ITitleStatus> = [status, status2, status23]
     const filterData: IFilterData = {
       generes: generes,
@@ -53,9 +53,7 @@ class TitleSearch extends React.Component<TitleSearchProps, TitleSearchState> {
     return (
       <Container>
         <Row>
-          <Col xs={8}>
-            <TitleList titleList={titleList} />
-          </Col>
+          <Col xs={8}>{/* <TitleList titles={[test22, test23]} /> */}</Col>
           <Col>
             <TitleFilter filterData={filterData} />
           </Col>

@@ -5,37 +5,43 @@ import TitleCard from './titleCard'
 import styles from './../styles/slider.module.css'
 import { IGenere } from './../Interfaceses/IGenere'
 import { connect } from 'react-redux'
-import { loadTitleBases } from '../store/slices/TitleSlice'
+import { loadTitleBases } from '../store/slices/titleSlice'
 import * as Redux from 'redux'
 
 export interface TitleSliderProps {}
 
-interface ReduxTitleSliderState {}
+interface ReduxTitleSliderProps {
+  titleBases?: Array<ITitleBase>
+}
 
 interface DispatchProps {
-  loadTitleBases: () => void
+  loadTitleBases?: () => void
 }
 
-type Props = ReduxTitleSliderState & DispatchProps & TitleSliderProps
+type Props = ReduxTitleSliderProps & DispatchProps & TitleSliderProps
 
-export interface TitleSliderState {
-  
-}
+export interface TitleSliderState {}
 class TitleSlider extends React.Component<Props, TitleSliderState> {
-  componentDidMount(){
-    this.props.loadTitleBases();
+  componentDidMount() {
+    if (this.props.loadTitleBases) this.props.loadTitleBases()
   }
 
-  render() {
-    const testElement: ITitleBase = {
-      TitleDetailsId: 12,
-      id: 12,
-      name: 'TestAnime',
-      posterUrl: 'test.jpg',
-      treeId: 2,
-      userRating: 9.5,
-      generes: new Array<IGenere>(),
+  sliderRender = () => {
+    if (typeof this.props.titleBases !== 'undefined') {
+      return this.props.titleBases.map((tb) => <TitleCard title={tb} />)
     }
+    return null
+  }
+  render() {
+    // const testElement: ITitleBase = {
+    //   titleDetailsId: 222,
+    //   id: 12,
+    //   name: 'TestAnime',
+    //   posterUrl: 'test.jpg',
+    //   treeId: 2,
+    //   userRating: 9.5,
+    //   generes: new Array<IGenere>(),
+    // }
     const settings: Settings = {
       dots: false,
       infinite: false,
@@ -48,24 +54,38 @@ class TitleSlider extends React.Component<Props, TitleSliderState> {
     }
     return (
       <div>
-        <Slider {...settings}>
-          <TitleCard title={testElement} />
-          <TitleCard title={testElement} />
-          <TitleCard title={testElement} />
-          <TitleCard title={testElement} />
-          <TitleCard title={testElement} />
-          <TitleCard title={testElement} />
-          <TitleCard title={testElement} />
-          <TitleCard title={testElement} />
-          <TitleCard title={testElement} />
-        </Slider>
+        <Slider {...settings}>{this.sliderRender()}</Slider>
       </div>
     )
   }
 }
-const mapStateToProps = (state: any, ownProps: TitleSliderProps) : ReduxTitleSliderState => ({titleBases: state.titles})
-const mapDispatchToProps = (dispatch: Redux.Dispatch<Redux.AnyAction>, ownProps: TitleSliderProps ) : DispatchProps=>({
-  loadTitleBases: ()=>dispatch(loadTitleBases())
-})
-connect(mapStateToProps,mapDispatchToProps)(TitleSlider)
-export default TitleSlider
+// const mapStateToProps = (
+//   state: any,
+//   ownProps: TitleSliderProps,
+// ): ReduxTitleSliderProps => {
+//   console.log(state)
+//   return {
+//     titleBases: state.topRaitedTitles,
+//   }
+// }
+// const mapDispatchToProps = (
+//   dispatch: Redux.Dispatch<Redux.AnyAction>,
+//   ownProps: TitleSliderProps,
+// ): DispatchProps => ({
+//   loadTitleBases: () => dispatch(loadTopRatiedTitleBases(10)),
+// })
+const mapStateToProps = (
+  state: any,
+  ownProps: TitleSliderProps,
+): ReduxTitleSliderProps => {
+  console.log(state)
+  return {
+    titleBases: state.entities.titles.titleBases
+      .slice()
+      .sort((a: ITitleBase, b: ITitleBase) =>
+        a.userRating > b.userRating ? 1 : b.userRating > a.userRating ? -1 : 0,
+      )
+      .slice(0, 10),
+  }
+}
+export default connect(mapStateToProps)(TitleSlider)

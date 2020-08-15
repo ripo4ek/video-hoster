@@ -1,35 +1,35 @@
-import * as React from 'react'
-import { Component } from 'react'
-import ReactPlayer from 'react-player'
-import styles from './../styles/player.module.css'
-import EpisodeSelect from './episodeSelect'
-import { Container, Col, Row } from 'react-bootstrap'
-import { IEpisode } from '../Interfaceses/IEpisode'
-import dateFormatter from './../helperFunctions/dateFormatter'
+import * as React from "react";
+import { Component } from "react";
+import ReactPlayer from "react-player";
+import styles from "./../styles/player.module.css";
+import EpisodeSelect from "./episodeSelect";
+import { Container, Col, Row } from "react-bootstrap";
+import { IEpisode } from "../Interfaceses/IEpisode";
+import dateFormatter from "./../helperFunctions/dateFormatter";
 
 export interface PlayerProps {
-  title?: string
-  episodes: Array<IEpisode>
+  title?: string;
+  episodes: Array<IEpisode>;
 }
 
 export interface PlayerState {
-  selectedEpisode: IEpisode | null
+  selectedEpisode: IEpisode | null;
 }
 
 class Player extends React.Component<PlayerProps, PlayerState> {
   state: PlayerState = {
     selectedEpisode: null,
-  }
+  };
   componentDidMount() {
-    const state = { ...this.state }
-    state.selectedEpisode = this.props.episodes[0]
-    this.setState(state)
+    const state = { ...this.state };
+    state.selectedEpisode = this.props.episodes[0];
+    this.setState(state);
   }
   selectHandler = (episode: IEpisode) => {
-    this.setState({ selectedEpisode: episode })
-  }
+    this.setState({ selectedEpisode: episode });
+  };
   render() {
-    const selectedEpisode = this.state.selectedEpisode
+    const selectedEpisode = this.state.selectedEpisode;
     return (
       <div className={styles.container}>
         <div className={styles.flexContainer}>
@@ -40,8 +40,8 @@ class Player extends React.Component<PlayerProps, PlayerState> {
                 <div className={styles.playerContainer}>
                   <div className={styles.playerFlexContainer}>
                     <ReactPlayer
-                      width={'100%'}
-                      height={'100%'}
+                      width={"100%"}
+                      height={"100%"}
                       url={selectedEpisode?.episodeUrl}
                     />
                   </div>
@@ -82,8 +82,8 @@ class Player extends React.Component<PlayerProps, PlayerState> {
           </Container>
         </div>
       </div>
-    )
+    );
   }
 }
 
-export default Player
+export default Player;

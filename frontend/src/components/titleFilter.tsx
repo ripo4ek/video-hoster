@@ -26,9 +26,9 @@ export interface TitleFilterState {
 class TitleFilter extends React.Component<TitleFilterProps, TitleFilterState> {
   state: TitleFilterState = {
     filter: {
-      yearRange: {
-        from: 1975,
-        to: 2020,
+      releaseRange: {
+        from: new Date(12, 12, 1, 22),
+        to: new Date(12, 12, 1, 22),
       },
       generes: [],
       titleType: null,
@@ -72,7 +72,7 @@ class TitleFilter extends React.Component<TitleFilterProps, TitleFilterState> {
       ...this.state.filter,
     }
 
-    filter.yearRange = yearExtractor(data)
+    //filter.yearRange = yearExtractor(data)
     this.setState({ filter })
   }
   render() {

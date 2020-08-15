@@ -1,4 +1,4 @@
 export interface IGenere {
-  id: number;
+  id: string;
   name: string;
 }

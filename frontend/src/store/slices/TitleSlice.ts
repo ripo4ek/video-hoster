@@ -1,33 +1,39 @@
-import { createSlice } from "@reduxjs/toolkit";
-import { apiCallBegan } from "../actions/api";
-import {ITitleBase} from '../../Interfaceses/ITitleBase'
-import { store } from "../store";
-import { stat } from "fs";
+import { createSlice } from '@reduxjs/toolkit'
+import { apiCallBegan, IApiData } from '../actions/api'
+import { ITitleBase } from '../../Interfaceses/ITitleBase'
+import { store } from '../store'
+import { stat } from 'fs'
+import { ITitleFilter } from '../../Interfaceses/ITitleFilter'
+import filterToApi from '../../helperFunctions/FilterToApi'
 
-interface TitleBaseSliceState{
+interface TitleBaseSliceState {
   titleBases: Array<ITitleBase>
-
 }
 
-const initialState: Array<ITitleBase> = [];
-
+const initialState: TitleBaseSliceState = {
+  titleBases: [],
+}
 export const titleSlice = createSlice({
-  name: "titleBases",
+  name: 'titleBases',
   initialState,
   reducers: {
-    titlesRecevied: (titles: Array<ITitleBase>, action) => {
-      titles = action.payload;
-      console.log("WORKED");
+    titleBasesRecevied: (state: TitleBaseSliceState, action) => {
+      state.titleBases = action.payload
     },
   },
-});
+})
 
-export default titleSlice.reducer;
-export const { titlesRecevied } = titleSlice.actions;
+export default titleSlice.reducer
+export const { titleBasesRecevied } = titleSlice.actions
 
-export const loadTitleBases = () => {
-  return apiCallBegan({
-    url: "/titleBases",
-    onSuccess: titleSlice.actions.titlesRecevied.type,
-  })
-};
+export const loadTitleBases = (filter?: ITitleFilter) => {
+  const params = typeof filter === 'undefined' ? null : filterToApi(filter)
+
+  const apiData: IApiData = {
+    url: '/titleBases',
+    onSuccess: titleSlice.actions.titleBasesRecevied.type,
+    params,
+  }
+
+  return apiCallBegan(apiData)
+}

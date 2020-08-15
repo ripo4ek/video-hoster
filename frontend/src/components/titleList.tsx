@@ -3,8 +3,10 @@ import { Component } from 'react'
 import { ITitleList } from './../Interfaceses/ITitleList'
 import styles from './../styles/titleList.module.css'
 import TitleElement from './titleElement'
+import { ITitleElement } from './../Interfaceses/ITitleElement'
 export interface TitleListProps {
-  titleList: ITitleList
+  name?: string
+  titles: Array<ITitleElement>
   preview?: boolean
   elementsToShow?: number
 }
@@ -29,16 +31,18 @@ class TitleList extends React.Component<TitleListProps, TitleListState> {
   }
   render() {
     const { elementsToShow, preview } = { ...this.state }
-    const titleList = this.props.titleList
+    const titleList = this.props.titles
     return (
       <React.Fragment>
         <div className={styles.container}>
           <div className={styles.flexContainer}>
             <div className={styles.titleContainer}>
-              <h2 className={styles.listName}>{titleList.name}</h2>
+              {this.props.name ? (
+                <h2 className={styles.listName}>{this.props.name}</h2>
+              ) : null}
             </div>
             <div>
-              {titleList.titles.slice(0, elementsToShow).map((title) => (
+              {titleList.slice(0, elementsToShow).map((title) => (
                 <TitleElement title={title} />
               ))}
             </div>

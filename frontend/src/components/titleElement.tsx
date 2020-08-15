@@ -31,18 +31,20 @@ class TitleElement extends React.Component<
               </a>
             </div>
             <div className={styles.genereList}>
-              {title.generes.map((genere) => (
-                <React.Fragment>
-                  <span>
-                    <a className={styles.genereName} href="#">
-                      {genere.name}
-                    </a>
-                  </span>
-                  <span className={styles.separator}>/</span>
-                </React.Fragment>
-              ))}
+              {title.generes
+                ? title.generes.map((genere) => (
+                    <React.Fragment>
+                      <span>
+                        <a className={styles.genereName} href="#">
+                          {genere.name}
+                        </a>
+                      </span>
+                      <span className={styles.separator}>/</span>
+                    </React.Fragment>
+                  ))
+                : null}
             </div>
-            <div>{title.description}</div>
+            <div className={styles.description}>{title.description}</div>
           </div>
         </div>
       </div>

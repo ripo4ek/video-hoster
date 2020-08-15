@@ -1,4 +1,4 @@
 export interface ITitleType {
-  id: number
-  name: string
+  id: string;
+  name: string;
 }

@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
-import { createCipher } from 'crypto'
-import { ITitleDropdownElement } from '../Interfaceses/ITitleDropdownElement'
-import { Image } from 'react-bootstrap'
-import styles from './../styles/titleDropdownElement.module.css'
+import React, { Component } from "react";
+import { createCipher } from "crypto";
+import { ITitleDropdownElement } from "../Interfaceses/ITitleDropdownElement";
+import { Image } from "react-bootstrap";
+import styles from "./../styles/titleDropdownElement.module.css";
 export interface TitleDropdownElementProps {
-  title: ITitleDropdownElement
+  title: ITitleDropdownElement;
 }
 
 export interface TitleDropdownElementState {}
@@ -14,16 +14,16 @@ class TitleDropdownElement extends React.Component<
   TitleDropdownElementState
 > {
   constructor(props: TitleDropdownElementProps) {
-    super(props)
+    super(props);
   }
   render() {
-    const element = { ...this.props.title }
+    const element = { ...this.props.title };
     return (
       <div className={styles.main}>
         <div className={styles.titleImage}>
           <Image
             style={{ width: 60, height: 60 }}
-            src={require('./../' + element.posterUrl)}
+            src={require("./../" + element.posterUrl)}
             roundedCircle
           />
           <span className={styles.title}>{element.name}</span>
@@ -31,13 +31,15 @@ class TitleDropdownElement extends React.Component<
 
         <div className={styles.numTime}>
           <div className={styles.numTimeFlex}>
-            <span className={styles.series}>{element.seriesNum} серия</span>
+            <span className={styles.series}>
+              {element.lastReleasedEpisodeNumber} серия
+            </span>
             <span>12:00</span>
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 
-export default TitleDropdownElement
+export default TitleDropdownElement;

@@ -1,19 +1,19 @@
-import * as React from 'react'
-import { Component } from 'react'
-import { ITitle } from './../Interfaceses/ITitle'
-import styles from './../styles/title.module.css'
-import Image from './basicComponents/image'
-import { Container, Row, Col } from 'react-bootstrap'
-import InfoElement from './basicComponents/infoElement'
-import { formatterObject } from './../helperFunctions/collectionformatter'
-import dateRangeFormatter from '../helperFunctions/dateRangeFormatter'
-import Preview from './preview'
-import TitleConnection from './titleConnection'
-import Player from './player'
-import ScheduleElement from './scheduleElement'
-import Schedule from './schedule'
+import * as React from "react";
+import { Component } from "react";
+import { ITitle } from "./../Interfaceses/ITitle";
+import styles from "./../styles/title.module.css";
+import Image from "./basicComponents/image";
+import { Container, Row, Col } from "react-bootstrap";
+import InfoElement from "./basicComponents/infoElement";
+import { formatterObject } from "./../helperFunctions/collectionformatter";
+import dateRangeFormatter from "../helperFunctions/dateRangeFormatter";
+import ImagePreview from "./imagePreview";
+import TitleConnection from "./titleConnection";
+import Player from "./player";
+import ScheduleElement from "./scheduleElement";
+import Schedule from "./schedule";
 export interface TitleProps {
-  title: ITitle
+  title: ITitle;
 }
 
 export interface TitleState {}
@@ -25,7 +25,7 @@ class Title extends React.Component<TitleProps, TitleState> {
       ...this.props.title.titleDetails,
       episiodes: [...this.props.title.titleDetails.episodes],
       titleConnections: this.props.title.titleConnections,
-    }
+    };
     return (
       <React.Fragment>
         <Container>
@@ -33,8 +33,8 @@ class Title extends React.Component<TitleProps, TitleState> {
             <Row>
               <Col sm={3}>
                 <Image
-                  mode={'fill'}
-                  src={require('./../' + title.posterUrl)}
+                  mode={"fill"}
+                  src={require("./../" + title.posterUrl)}
                   width={250}
                   height={350}
                 />
@@ -47,8 +47,8 @@ class Title extends React.Component<TitleProps, TitleState> {
                         <Image
                           width={35}
                           height={35}
-                          mode={'fill'}
-                          src={require('./../' + 'star_77949.svg')}
+                          mode={"fill"}
+                          src={require("./../" + "star_77949.svg")}
                         ></Image>
                         <div
                           className={styles.raitingNumber}
@@ -58,12 +58,12 @@ class Title extends React.Component<TitleProps, TitleState> {
                     </div>
                     <div className={styles.mediaTitleName}>{title.name}</div>
                     <hr />
-                    <InfoElement name="Тип">{title.titleType.name}</InfoElement>
+                    {/* <InfoElement name="Тип">{title.titleType.name}</InfoElement> */}
                     <InfoElement name="Эпизоды">
                       {title.eposodesCount}
                     </InfoElement>
                     <InfoElement name="Статус">
-                      {title.titleStatus.name}
+                      {/* {title.titleStatus.name} */}
                     </InfoElement>
                     <InfoElement name="Жанр">
                       <div className={styles.range}>
@@ -73,7 +73,7 @@ class Title extends React.Component<TitleProps, TitleState> {
                       </div>
                     </InfoElement>
                     <InfoElement name="Выпуск">
-                      {dateRangeFormatter(title.releaseDateRange)}
+                      {/* {dateRangeFormatter(title.releaseDateRange)} */}
                     </InfoElement>
                     <InfoElement name="Длительность">
                       {`${title.episodeDuration} мин. ~серия`}
@@ -90,8 +90,11 @@ class Title extends React.Component<TitleProps, TitleState> {
               </Col>
             </Row>
             <Row>
-              <Preview title={'Кадры'} imageUrls={title.screenshots} />
-              <Preview title={'Трейлер'} imageUrls={[title.screenshots[0]]} />
+              <ImagePreview title={"Кадры"} imageUrls={title.screenshots} />
+              <ImagePreview
+                title={"Трейлер"}
+                imageUrls={[title.screenshots[0]]}
+              />
             </Row>
             <Row>
               <Col>
@@ -141,8 +144,8 @@ class Title extends React.Component<TitleProps, TitleState> {
       //     </div>
       //   </div>
       // </div>
-    )
+    );
   }
 }
 
-export default Title
+export default Title;

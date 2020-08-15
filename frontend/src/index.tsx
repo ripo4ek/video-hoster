@@ -7,7 +7,8 @@ import { Provider } from 'react-redux'
 import * as serviceWorker from './serviceWorker'
 import { BrowserRouter } from 'react-router-dom'
 
-console.log(process.env.REACT_APP_CONNECTION_STRING)
+
+
 
 ReactDOM.render(
   <React.StrictMode>

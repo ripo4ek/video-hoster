@@ -13,76 +13,37 @@ import { ITitleChunk } from './../Interfaceses/ITitleChunk'
 import { ITitleStatus } from './../Interfaceses/ITitleStatus'
 import { IFilterData } from './../Interfaceses/IFilterData'
 import { ITitleDropdownList } from './../Interfaceses/ITitleDropdownList'
+import { ITitleBase } from './../Interfaceses/ITitleBase'
+import { loadTitleBases } from '../store/slices/titleSlice'
+import { connect } from 'react-redux'
+import * as Redux from 'redux'
+import TitlePreview from './titlePreview'
+import {
+  createScheduleChunk,
+  createLastUpdatedChunk,
+} from './../helperFunctions/createChunk'
 
 export interface MainPageProps {}
 
+//из-за того что сами компоненты универсальны (TitleChunk), но вывод информации в них нет пришлось выводить redux state сюда
+//TODO: Сделать возможность универсальность вывода для компонентов и перенести вызов redux state в каждый из них
+interface ReduxMainPageProps {
+  topRaitedTitleBases: Array<ITitleBase>
+  lastUpdatedTitleBases: Array<ITitleBase>
+  newAddedTitleBases: Array<ITitleBase>
+  goingTitleBases: Array<ITitleBase>
+}
+
+interface DispatchProps {}
+
+type Props = ReduxMainPageProps & DispatchProps & MainPageProps
+
 export interface MainPageState {}
 
-class MainPage extends React.Component<MainPageProps, MainPageState> {
+class MainPage extends React.Component<Props, MainPageState> {
   render() {
-    const generes: Array<IGenere> = [
-      { id: 12, name: 'test' },
-      { id: 13, name: 'Gavno' },
-      { id: 14, name: 'testGavno' },
-    ]
-    const test22: ITitleElement = {
-      id: 12,
-      name: 'TestAnime',
-      posterUrl: 'test.jpg',
-      description: 'dfgggggggggggggggggggggggggggggggggggggggggggggggggggggg',
-      generes: generes,
-    }
-    const test23: ITitleElement = {
-      id: 12,
-      name: 'TestAnime',
-      posterUrl: 'test.jpg',
-      description: 'dfgggggggggggggggggggggggggggggggggggggggggggggggggggggg',
-      generes: generes,
-    }
-    const titleList: ITitleList = {
-      name: 'TestName',
-      titles: [test22, test23],
-    }
-    const test: ITitleDropdownElement = {
-      id: 12,
-      name: 'TestAnime',
-      posterUrl: 'test.jpg',
-      seriesNum: 99,
-      releaseTime: new Date(12, 12, 12, 12, 12, 12),
-    }
-    const test2: ITitleDropdownElement = {
-      id: 12,
-      name: 'TestAnime',
-      posterUrl: 'test.jpg',
-      seriesNum: 99,
-      releaseTime: new Date(12, 12, 12, 12, 12, 12),
-    }
-    const entity1: ITitleDropdownList = {
-      name: 'Monday',
-      titleElements: [test, test2],
-    }
-    const entity2: ITitleDropdownList = {
-      name: 'Friday',
-      titleElements: [test, test2],
-    }
-
-    const titles: Array<ITitleDropdownList> = [entity1, entity2]
-    const chunk: ITitleChunk = { name: 'firstList', titles }
-    const chunk2: ITitleChunk = { name: 'second', titles }
-    const chunk3: ITitleChunk = { name: 'third', titles }
-    const status: ITitleStatus = { id: 12, name: 'OVA' }
-    const status2: ITitleStatus = { id: 33, name: 'anime' }
-    const status23: ITitleStatus = { id: 223, name: 'complete' }
-    const statuses: Array<ITitleStatus> = [status, status2]
-    const filterData: IFilterData = {
-      generes: generes,
-      statuses: statuses,
-      types: [],
-      yearRange: {
-        from: 1975,
-        to: 2020,
-      },
-    }
+    let lastUpdated = createLastUpdatedChunk(this.props.lastUpdatedTitleBases)
+    let schedule = createScheduleChunk(this.props.goingTitleBases)
     return (
       <Container>
         <Row>
@@ -95,26 +56,66 @@ class MainPage extends React.Component<MainPageProps, MainPageState> {
         </Row>
         <Row>
           <Col>
-            <TitleChunk titleChunk={chunk} />
+            {console.log(lastUpdated)}
+            <TitleChunk name={'Последние обновления'} elements={lastUpdated} />
           </Col>
           <Col>
-            <TitleChunk titleChunk={chunk2} />
+            <TitleChunk name={'Расписание'} elements={schedule} />
           </Col>
           <Col>
-            <TitleChunk titleChunk={chunk3} />
+            <TitlePreview
+              name={'Последние релизы'}
+              titles={this.props.goingTitleBases}
+            />
           </Col>
         </Row>
         <Row>
           <Col md={8}>
-            <TitleList preview elementsToShow={5} titleList={titleList} />
+            <TitleList
+              name={'Новые релизы'}
+              preview
+              elementsToShow={5}
+              titles={this.props.goingTitleBases}
+            />
           </Col>
-          <Col>
-            <TitleFilter preview filterData={filterData} />
-          </Col>
+          <Col>{/* <TitleFilter preview filterData={filterData} /> */}</Col>{' '}
         </Row>
       </Container>
     )
   }
 }
 
-export default MainPage
+const mapStateToProps = (
+  state: any,
+  ownProps: MainPageProps,
+): ReduxMainPageProps => {
+  console.log(state)
+  const titleBases: Array<ITitleBase> = state.entities.titles.titleBases.slice()
+  return {
+    topRaitedTitleBases: titleBases
+      .sort((a: ITitleBase, b: ITitleBase) =>
+        a.userRating > b.userRating ? 1 : b.userRating > a.userRating ? -1 : 0,
+      )
+      .slice(0, 10),
+    lastUpdatedTitleBases: titleBases
+      .sort((a: ITitleBase, b: ITitleBase) =>
+        a.lastUpdated > b.lastUpdated
+          ? 1
+          : b.lastUpdated > a.lastUpdated
+          ? -1
+          : 0,
+      )
+      .slice(0, 10),
+    newAddedTitleBases: titleBases
+      .sort((a: ITitleBase, b: ITitleBase) =>
+        a.addedOnSite > b.addedOnSite
+          ? 1
+          : b.addedOnSite > a.addedOnSite
+          ? -1
+          : 0,
+      )
+      .slice(0, 10),
+    goingTitleBases: titleBases.filter((tb) => tb.isFinished === false),
+  }
+}
+export default connect(mapStateToProps, null)(MainPage)
