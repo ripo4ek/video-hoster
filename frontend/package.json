@@ -23,7 +23,7 @@
     "moment": "^2.27.0",
     "nouislider-react": "^3.3.8",
     "plural-ru": "^2.0.2",
-    "qs": "^6.9.4",
+    "qs": "^6.9.7",
     "query-string": "^6.13.1",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.1",
